@@ -9,46 +9,52 @@
 <body>
 <header class="top"><div class="wrap">
   <a class="logo" href="/">OAri<span>Marketing</span></a>
-  <nav><a href="/">Home</a><a href="/terms.html">Terms</a><a href="/#contact">Contact</a></nav>
+  <nav><a href="/">Home</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a><a href="/#contact">Contact</a></nav>
 </div></header>
 <main class="doc"><div class="wrap">
   <h1>Privacy Policy</h1>
   <p class="upd">Last updated: November 26, 2026</p>
+  <p>This policy explains how OAri Marketing (legal name 67.607.604 ARIEL BATISTA DA SILVA, a Brazilian sole proprietorship (MEI), CNPJ 67.607.604/0001-71, São Leopoldo/RS — "we") handles data in <b>Painel do Criador</b>, our analytics dashboard for TikTok Shop affiliate creators (TikTok for Business developer app "Ari Metricas"; TikTok Shop Partner Center app "Ari Vendas"), and on this website. It follows Brazil's General Data Protection Law (LGPD, Law 13.709/2018) and the Brazilian Internet Civil Framework (Law 12.965/2014).</p>
 
-  <p>This policy explains how OAri Marketing (Ariel Batista da Silva, MEI, Brazil — "we") handles data in Ari Metricas and Ari Vendas, our internal analytics tools (together, "the tools"), and on this website.</p>
+  <h2>1. Who uses Painel do Criador</h2>
+  <p>TikTok Shop affiliate creators who create an account with us. Each creator connects <b>only their own</b> TikTok accounts through TikTok's official authorization screens. We never ask for TikTok passwords, and access can be revoked at any time.</p>
 
-  <h2>1. Who uses the tools</h2>
-  <p>The tools are used only by the owner of OAri Marketing. They are not public services and have no other users. The only TikTok and TikTok Shop creator accounts connected to them are accounts that we own and that we authorize ourselves through the official consent screens of TikTok and TikTok Shop Partner Center.</p>
-
-  <h2>2. Data we access</h2>
+  <h2>2. Data we access and why</h2>
   <ul>
-    <li>Basic profile information of our own TikTok accounts (display name, username, avatar).</li>
-    <li>The list of our own videos and their metrics: views, likes, comments, shares, reach, average time watched, full video watched rate, and aggregated, anonymous audience breakdowns (gender and country percentages).</li>
-    <li>Affiliate orders of our own creator accounts, read through the TikTok Shop Partner Center API with read-only scopes (creator.affiliate_collaboration.read and creator.affiliate.info): order ID, date, status, product, quantity, order amount, commission and the video or live that generated the sale, plus our own affiliate profile.</li>
-    <li>Affiliate sales figures for our own videos, from the reports of our affiliate agency.</li>
+    <li><b>Account data:</b> name, e-mail and a password stored only as a hash — to create and secure the creator's account (legal basis: performance of contract, LGPD art. 7, V).</li>
+    <li><b>Video insights</b> of the creator's own TikTok Business account, read-only through the TikTok API for Business: video views, average time watched, full video watched rate and aggregated audience gender and country percentages — to show video performance (performance of contract).</li>
+    <li><b>Affiliate orders</b> of the creator's own accounts, read-only through the TikTok Shop Partner Center API: order ID, date, status, product, quantity, amount, estimated commission and the video or live that generated the sale — to show sales and commission per video and product (performance of contract).</li>
+    <li><b>Access tokens</b> for the connected accounts — stored encrypted, refreshed only through TikTok's official flows.</li>
+    <li><b>Access logs</b> (IP address, date, time and action) — kept for 6 months as required by Law 12.965/2014, art. 15 (legal obligation).</li>
   </ul>
-  <p>We do not request or store buyer personal data (names, addresses, phone numbers or e-mails); if any such field is returned by an API, it is discarded and never saved. We do not access data that identifies individual viewers, private messages, or any account we do not own. We do not post, comment, send messages or change anything on TikTok or TikTok Shop through the tools.</p>
+  <p>We do <b>not</b> request or store buyer personal data (names, addresses, phone numbers or e-mails); if an API returns such fields, they are discarded. Audience data is aggregated by TikTok and does not identify individuals. We do not post, edit, delete, comment or send messages on TikTok; all permissions we use are read-only. We do not sell data, do not use it for advertising and do not build profiles.</p>
 
-  <h2>3. How we use it</h2>
-  <p>Solely to measure the performance of our own content: which videos and products generate views and sales, so we can plan new videos. We do not sell, rent or share this data, and we do not use it for advertising or profiling.</p>
+  <h2>3. Sharing</h2>
+  <p>Data is shared only with: TikTok (the source of the data, which receives the authorization and our API requests); our hosting provider (stores the database); our e-mail provider (account e-mails such as password reset); and authorities when required by law. If a provider stores data outside Brazil, the transfer follows LGPD art. 33.</p>
 
-  <h2>4. Storage and security</h2>
-  <p>Data is stored in a local database on a computer we control. Access tokens are kept in a private configuration file, never in source code, and are refreshed only through the official TikTok and TikTok Shop flows. The app secret is never placed in source code or on this website. The dashboard is protected by a password and is only reachable from our home network.</p>
+  <h2>4. Security</h2>
+  <p>HTTPS for all connections; passwords hashed with argon2; access tokens encrypted with a key kept outside the database; each creator can only see their own data (verified by automated tests); protection against forged forms, rate limiting of login attempts, and sessions invalidated on password change.</p>
 
   <h2>5. Retention and deletion</h2>
-  <p>We keep metrics while they are useful for our analysis. We can revoke the tools' access at any time in TikTok's settings (Security and permissions → Manage app permissions) or in TikTok Shop's authorization settings; after revocation, no new data is collected and we delete the stored tokens. Stored metrics can be deleted on request.</p>
+  <p>Account data, orders and insights are kept while the account exists and deleted when the creator deletes the account, which can be done at any time inside the dashboard. Disconnecting a TikTok account deletes its tokens. Access logs are kept for 6 months and then deleted automatically. Creators can also revoke our access in TikTok's own settings.</p>
 
-  <h2>6. This website</h2>
-  <p>This website does not use cookies, analytics or tracking scripts, and does not collect personal data. If you e-mail us, we use your message only to reply.</p>
+  <h2>6. Your rights (LGPD, art. 18)</h2>
+  <p>You may request confirmation of processing, access, correction, anonymization, blocking or deletion, portability, information about sharing, and revocation of consent. Write to <a href="mailto:contato@oarimarketing.app">contato@oarimarketing.app</a>; we reply within 15 days. You may also file a complaint with Brazil's data protection authority (ANPD).</p>
 
-  <h2>7. Your rights (LGPD)</h2>
-  <p>Under Brazil's General Data Protection Law (Lei 13.709/2018) you may ask us about any personal data we hold about you, and request correction or deletion.</p>
+  <h2>7. Security incidents</h2>
+  <p>If an incident may cause relevant risk or damage, we will notify affected creators and the ANPD (LGPD, art. 48), revoke the affected TikTok authorizations and rotate our credentials.</p>
 
-  <h2>8. Contact</h2>
-  <p>Questions about this policy: <a href="mailto:contato@oarimarketing.app">contato@oarimarketing.app</a>.</p>
+  <h2>8. Cookies and this website</h2>
+  <p>We use only strictly necessary cookies (session and form protection). This website has no analytics or tracking scripts.</p>
+
+  <h2>9. Age</h2>
+  <p>Painel do Criador is intended for people aged 18 or older, as required by the TikTok Shop affiliate program.</p>
+
+  <h2>10. Contact</h2>
+  <p><a href="mailto:contato@oarimarketing.app">contato@oarimarketing.app</a></p>
 </div></main>
 <footer><div class="wrap">
-  <span>© 2026 OAri Marketing · Ariel Batista da Silva (MEI), Brazil</span>
+  <span>© 2026 OAri Marketing · 67.607.604 ARIEL BATISTA DA SILVA (MEI, CNPJ 67.607.604/0001-71), Brazil</span>
   <span><a href="/privacy.html">Privacy Policy</a><a href="/terms.html">Terms of Use</a></span>
 </div></footer>
 </body>
