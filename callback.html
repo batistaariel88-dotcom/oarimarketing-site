@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<meta name="referrer" content="no-referrer">
+<title>Authorization — OAri Marketing</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  .code{font-family:Consolas,monospace;word-break:break-all;background:#f3f4f6;border:1px solid #d1d5db;border-radius:8px;padding:14px;margin:12px 0}
+  .btn{display:inline-block;background:#0f766e;color:#fff;border:0;border-radius:8px;padding:10px 18px;font-size:16px;cursor:pointer}
+  .err{color:#b91c1c}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="logo" href="/">OAri<span>Marketing</span></a>
+  <nav><a href="/">Home</a><a href="/privacy.html">Privacy</a></nav>
+</div></header>
+<main class="doc"><div class="wrap">
+  <h1>Authorization</h1>
+  <div id="out"><p>Reading the authorization response…</p></div>
+  <p class="upd">This page runs only in your browser. It does not send the code anywhere and does not store it.</p>
+</div></main>
+<script>
+(function () {
+  var p = new URLSearchParams(location.search);
+  var out = document.getElementById('out');
+  var code = p.get('code') || p.get('auth_code');
+  var err = p.get('error') || p.get('error_description');
+  function esc(s){var d=document.createElement('div');d.textContent=s;return d.innerHTML;}
+  if (code) {
+    out.innerHTML = '<p>Authorization received. Copy the code below and paste it in the dashboard:</p>' +
+      '<div class="code" id="c">' + esc(code) + '</div>' +
+      '<button class="btn" id="b">Copy code</button> <span id="ok"></span>' +
+      (p.get('state') ? '<p class="upd">state: ' + esc(p.get('state')) + '</p>' : '');
+    document.getElementById('b').onclick = function () {
+      navigator.clipboard.writeText(code).then(function(){document.getElementById('ok').textContent='Copied.';});
+    };
+  } else if (err) {
+    out.innerHTML = '<p class="err">Authorization was not completed: ' + esc(err) + '</p>';
+  } else {
+    out.innerHTML = '<p>No authorization code in this address. Start the authorization again from the dashboard.</p>';
+  }
+  if (history.replaceState) history.replaceState(null, '', location.pathname);
+})();
+</script>
+</body>
+</html>
