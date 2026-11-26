@@ -27,6 +27,15 @@
 (function () {
   var p = new URLSearchParams(location.search);
   var out = document.getElementById('out');
+  // Autorização iniciada pelo app rodando no PC (state "local.<fonte>.<aleatório>"):
+  // devolve code e state para o próprio PC, só para estas rotas fixas.
+  var st = p.get('state') || '';
+  var partes = st.split('.');
+  var FONTES = {partner_center: 1, business_api: 1};
+  if (partes[0] === 'local' && FONTES[partes[1]] === 1 && /^[A-Za-z0-9_\-.]+$/.test(st)) {
+    location.replace('http://127.0.0.1:8500/callback/' + partes[1] + '?' + p.toString());
+    return;
+  }
   var code = p.get('code') || p.get('auth_code');
   var err = p.get('error') || p.get('error_description');
   function esc(s){var d=document.createElement('div');d.textContent=s;return d.innerHTML;}
