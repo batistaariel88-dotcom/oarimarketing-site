@@ -36,6 +36,11 @@
     location.replace('http://127.0.0.1:8500/callback/' + partes[1] + '?' + p.toString());
     return;
   }
+  // Autorização iniciada pelo app no servidor (state "<fonte>.<aleatório>"): devolve para o app.
+  if (FONTES[partes[0]] === 1 && /^[A-Za-z0-9_\-.]+$/.test(st)) {
+    location.replace('https://app.oarimarketing.app/callback/' + partes[0] + '?' + p.toString());
+    return;
+  }
   var code = p.get('code') || p.get('auth_code');
   var err = p.get('error') || p.get('error_description');
   function esc(s){var d=document.createElement('div');d.textContent=s;return d.innerHTML;}
